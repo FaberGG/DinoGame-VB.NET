@@ -235,5 +235,10 @@ Public Class DinoGameForm
         End Using
     End Sub
 #End Region
-
+    Protected Overrides Sub OnFormClosed(e As FormClosedEventArgs)
+        ' Liberar recursos de ambas clases
+        Obstacle.DisposeResources()
+        player?.DisposeResources()
+        MyBase.OnFormClosed(e)
+    End Sub
 End Class

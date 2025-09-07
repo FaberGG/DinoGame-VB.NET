@@ -7,10 +7,13 @@
     "name",
     "type",
     "neutral-value",
-    "neutral-comment"
+    "neutral-comment",
+    "file-path",
+    "file-name"
   ],
   "VisibleColumnKeys": [
     "name",
+    "type",
     "neutral-value"
   ]
 }

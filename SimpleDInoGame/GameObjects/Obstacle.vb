@@ -1,58 +1,162 @@
 ﻿' ====================================================================
-' CLASE OBSTACLE
+' CLASE OBSTACLE (CORREGIDA - SIN DESPLAZAMIENTO EN EJE X)
 ' ====================================================================
-' Propósito: Representa un obstáculo individual que se mueve horizontalmente
-' de derecha a izquierda por la pantalla.
-' 
-' Responsabilidades:
-' - Mantener posición y dimensiones del obstáculo
-' - Moverse hacia la izquierda a velocidad constante
-' - Proporcionar información de colisión (GetBounds)
-' - Renderizarse como rectángulo rojo
-' - Detectar cuando sale de pantalla para ser eliminado
+' Solución: Ajustar tanto hitbox como posición base al seleccionar sprite
 ' ====================================================================
 Public Class Obstacle
-    ' Variables de posición y dimensiones
+    ' Variables de posición y dimensiones LÓGICAS (para colisiones)
     Private x As Integer, y As Integer          ' Posición actual (x,y)
-    Private width As Integer, height As Integer ' Ancho y alto del obstáculo
+    Private width As Integer, height As Integer ' Dimensiones de COLISIÓN
+    Private originalX As Integer, originalY As Integer ' Posición original para referencia
 
-    ' Variable de movimiento (Single es más eficiente que Double - 4 bytes vs 8 bytes)
+    ' Variable de movimiento
     Private speed As Single                     ' Velocidad horizontal en píxeles/frame
 
-    ' Constructor: Inicializa un obstáculo con posición, tamaño y velocidad específicos
-    ' startX: Posición inicial X (normalmente fuera del borde derecho)
-    ' startY: Posición inicial Y (normalmente a nivel del suelo)
-    ' w, h: Dimensiones del obstáculo
-    ' obstacleSpeed: Velocidad de movimiento hacia la izquierda
+    ' Variable para el sprite del cactus
+    Private cactusSprite As Image              ' Imagen del cactus a renderizar
+    Private cactusType As Integer              ' Tipo de cactus (para tamaños diferentes)
+
+    ' Array estático de sprites de cactus
+    Private Shared cactusSprites() As Image
+    Private Shared isSpritesLoaded As Boolean = False
+
+    ' Definir diferentes tamaños de renderizado para variedad
+    Private Shared ReadOnly CactusRenderSizes() As Size = {
+        New Size(32, 64),   ' Cactus pequeño
+        New Size(40, 80),   ' Cactus mediano
+        New Size(48, 96)    ' Cactus grande
+    }
+
+    ' Constructor con dimensiones lógicas para colisiones
     Public Sub New(startX As Integer, startY As Integer, w As Integer, h As Integer, obstacleSpeed As Single)
+        ' Guardar posición original
+        originalX = startX
+        originalY = startY
+
+        ' Inicializar con dimensiones temporales
         x = startX
         y = startY
         width = w
         height = h
         speed = obstacleSpeed
+
+        ' Cargar sprites si es necesario
+        If Not isSpritesLoaded Then
+            LoadCactusSprites()
+        End If
+
+        ' Seleccionar sprite y AJUSTAR posición y dimensiones
+        SelectRandomCactusSpriteAndAdjust()
     End Sub
 
-    ' Actualiza la posición del obstáculo moviéndolo hacia la izquierda
-    ' Se llama en cada frame del juego (50 FPS)
+    ' Carga todos los sprites de cactus una sola vez
+    Private Shared Sub LoadCactusSprites()
+        Try
+            cactusSprites = {
+                My.Resources.cactus1,      ' Cactus tipo 1
+                My.Resources.cactus2,      ' Cactus tipo 2
+                My.Resources.cactus3       ' Cactus tipo 3
+            }
+            isSpritesLoaded = True
+        Catch ex As Exception
+            cactusSprites = Nothing
+            isSpritesLoaded = False
+            System.Diagnostics.Debug.WriteLine("Error cargando sprites de cactus: " & ex.Message)
+        End Try
+    End Sub
+
+    ' VERSIÓN CORREGIDA: Ajusta sprite, hitbox Y posición
+    Private Sub SelectRandomCactusSpriteAndAdjust()
+        Try
+            If cactusSprites IsNot Nothing AndAlso cactusSprites.Length > 0 Then
+                Dim random As New Random()
+
+                ' Seleccionar tipo de cactus aleatorio
+                cactusType = random.Next(0, Math.Min(cactusSprites.Length, CactusRenderSizes.Length))
+                cactusSprite = cactusSprites(cactusType)
+
+                ' Obtener tamaño de renderizado
+                Dim renderSize As Size = CactusRenderSizes(cactusType)
+
+                ' AJUSTAR HITBOX AL SPRITE (80% ancho, 90% alto para colisión más justa)
+                Dim newWidth As Integer = CInt(renderSize.Width * 0.8)
+                Dim newHeight As Integer = CInt(renderSize.Height * 0.9)
+
+                ' CALCULAR NUEVA POSICIÓN PARA MANTENER ALINEACIÓN
+                ' Mantener el punto inferior del cactus en el mismo lugar
+                Dim newX As Integer = originalX - (newWidth - width) \ 2  ' Centrar horizontalmente
+                Dim newY As Integer = originalY - (newHeight - height)    ' Alinear desde abajo
+
+                ' Actualizar dimensiones y posición
+                width = newWidth
+                height = newHeight
+                x = newX
+                y = newY
+
+            Else
+                cactusSprite = Nothing
+            End If
+        Catch ex As Exception
+            cactusSprite = Nothing
+        End Try
+    End Sub
+
+    ' Actualiza posición
     Public Sub Update()
-        x -= CInt(speed)    ' Convertir Single a Integer para posición exacta
+        x -= CInt(speed)
     End Sub
 
-    ' Determina si el obstáculo ha salido completamente de la pantalla
-    ' Retorna True cuando el borde derecho del obstáculo está fuera del borde izquierdo
+    ' Verifica si salió de pantalla
     Public Function IsOffScreen() As Boolean
         Return x + width < 0
     End Function
 
-    ' Renderiza el obstáculo como un rectángulo rojo sólido
-    ' g: Contexto gráfico donde dibujar
+    ' Renderiza con sprite escalado (SIN cálculo de centrado adicional)
     Public Sub Render(g As Graphics)
+        If cactusSprite IsNot Nothing Then
+            Try
+                ' Obtener tamaño de renderizado según el tipo
+                Dim renderSize As Size = CactusRenderSizes(cactusType)
+
+                ' POSICIÓN DE RENDERIZADO: Usar directamente x,y ajustada + centrado mínimo
+                Dim renderX As Integer = x - (renderSize.Width - width) \ 2
+                Dim renderY As Integer = y - (renderSize.Height - height)
+
+                ' Dibujar sprite escalado
+                g.DrawImage(cactusSprite, renderX, renderY, renderSize.Width, renderSize.Height)
+
+                ' DEBUG: Mostrar hitbox (comentar en producción)
+                g.DrawRectangle(Pens.Red, x, y, width, height)
+
+                ' DEBUG ADICIONAL: Mostrar punto original (comentar en producción)
+                g.FillEllipse(Brushes.Blue, originalX - 2, originalY - 2, 4, 4)
+
+            Catch ex As Exception
+                RenderFallback(g)
+            End Try
+        Else
+            RenderFallback(g)
+        End If
+    End Sub
+
+    ' Fallback a rectángulo rojo
+    Private Sub RenderFallback(g As Graphics)
         g.FillRectangle(Brushes.Red, x, y, width, height)
     End Sub
 
-    ' Retorna el rectángulo de colisión del obstáculo
-    ' Usado por el sistema de detección de colisiones
+    ' Retorna rectángulo de colisión LÓGICO
     Public Function GetBounds() As Rectangle
         Return New Rectangle(x, y, width, height)
     End Function
+
+    ' Liberar recursos estáticos
+    Public Shared Sub DisposeResources()
+        If cactusSprites IsNot Nothing Then
+            For Each sprite In cactusSprites
+                sprite?.Dispose()
+            Next
+            cactusSprites = Nothing
+            isSpritesLoaded = False
+        End If
+    End Sub
 End Class

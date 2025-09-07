@@ -32,7 +32,7 @@ Public Class ObstacleManager
     ' speed: Velocidad base para los obstáculos
     Public Sub New(width As Integer, ground As Integer, speed As Single)
         screenWidth = width
-        groundY = ground
+        groundY = ground + 6  ' Ajuste para alinear con el suelo visual
         baseSpeed = speed
     End Sub
 

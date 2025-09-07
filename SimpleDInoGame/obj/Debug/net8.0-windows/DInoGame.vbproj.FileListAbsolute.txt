@@ -28,3 +28,6 @@ C:\Users\jhonn\OneDrive\Unicauca\Semestre VI\Estructuras de Lenguajes\Exposicion
 C:\Users\jhonn\OneDrive\Unicauca\Semestre VI\Estructuras de Lenguajes\Exposicion-VBNET\Demo\DInoGame\SimpleDInoGame\obj\Debug\net8.0-windows\DInoGame.pdb
 C:\Users\jhonn\OneDrive\Unicauca\Semestre VI\Estructuras de Lenguajes\Exposicion-VBNET\Demo\DInoGame\SimpleDInoGame\obj\Debug\net8.0-windows\DInoGame.genruntimeconfig.cache
 C:\Users\jhonn\OneDrive\Unicauca\Semestre VI\Estructuras de Lenguajes\Exposicion-VBNET\Demo\DInoGame\SimpleDInoGame\obj\Debug\net8.0-windows\ref\DInoGame.dll
+C:\Users\jhonn\OneDrive\Unicauca\Semestre VI\Estructuras de Lenguajes\Exposicion-VBNET\Demo\DInoGame\SimpleDInoGame\obj\Debug\net8.0-windows\DInoGame.Resources.resources
+C:\Users\jhonn\OneDrive\Unicauca\Semestre VI\Estructuras de Lenguajes\Exposicion-VBNET\Demo\DInoGame\SimpleDInoGame\obj\Debug\net8.0-windows\DInoGame.vbproj.GenerateResource.cache
+C:\Users\jhonn\OneDrive\Unicauca\Semestre VI\Estructuras de Lenguajes\Exposicion-VBNET\Demo\DInoGame\SimpleDInoGame\obj\Debug\net8.0-windows\DInoGame.sourcelink.json
