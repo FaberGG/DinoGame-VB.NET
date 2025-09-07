@@ -3,6 +3,7 @@
 ## 📝 Descripción del Proyecto
 
 Este proyecto es una implementación educativa del clásico **Chrome Dino Game** desarrollado completamente en **Visual Basic .NET (VB.NET)** usando **Windows Forms**. El juego presenta un dinosaurio (representado como un cuadrado azul) que debe saltar sobre obstáculos rojos para obtener la mayor puntuación posible.
+<img width="995" height="554" alt="image" src="https://github.com/user-attachments/assets/294f31b8-97ca-4af7-b227-0484169020dc" />
 
 ## 🎯 Propósito Educativo
 
