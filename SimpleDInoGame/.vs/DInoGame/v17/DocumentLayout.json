@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|c:\\users\\jhonn\\onedrive\\unicauca\\semestre vi\\estructuras de lenguajes\\exposicion-vbnet\\demo\\dinogame\\simpledinogame\\manager\\obstaclemanager.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|solutionrelative:manager\\obstaclemanager.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|c:\\users\\jhonn\\onedrive\\unicauca\\semestre vi\\estructuras de lenguajes\\exposicion-vbnet\\demo\\dinogame\\simpledinogame\\gameobjects\\obstacle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|solutionrelative:gameobjects\\obstacle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
@@ -59,12 +63,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ObstacleManager.vb",
+              "DocumentMoniker": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Manager\\ObstacleManager.vb",
+              "RelativeDocumentMoniker": "Manager\\ObstacleManager.vb",
+              "ToolTip": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Manager\\ObstacleManager.vb",
+              "RelativeToolTip": "Manager\\ObstacleManager.vb",
+              "ViewState": "AgIAAHQAAAAAAAAAAAA9wEMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-07T17:55:11.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Obstacle.vb",
               "DocumentMoniker": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\GameObjects\\Obstacle.vb",
               "RelativeDocumentMoniker": "GameObjects\\Obstacle.vb",
               "ToolTip": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\GameObjects\\Obstacle.vb",
               "RelativeToolTip": "GameObjects\\Obstacle.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIcAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAowK4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-09-07T05:34:18.164Z",
               "EditorCaption": ""

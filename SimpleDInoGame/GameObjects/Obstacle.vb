@@ -1,11 +1,24 @@
 ﻿' ====================================================================
-' CLASE OBSTACLE (CORREGIDA - SIN DESPLAZAMIENTO EN EJE X)
+' CLASE OBSTACLE
 ' ====================================================================
-' Solución: Ajustar tanto hitbox como posición base al seleccionar sprite
-' ====================================================================
+
 Public Class Obstacle
-    ' Variables de posición y dimensiones LÓGICAS (para colisiones)
-    Private x As Integer, y As Integer          ' Posición actual (x,y)
+    ' Constantes para tipos de obstáculos
+    Public Const SMALL_CACTUS As Integer = 0
+    Public Const MEDIUM_CACTUS As Integer = 1
+    Public Const LARGE_CACTUS As Integer = 2
+
+    ' Constantes para dimensiones base de hitbox
+    Private Const BASE_HITBOX_WIDTH As Integer = 30
+    Private Const BASE_HITBOX_HEIGHT As Integer = 60
+
+    ' Constantes para ajuste de colisión
+    Private Const COLLISION_WIDTH_FACTOR As Single = 0.8F
+    Private Const COLLISION_HEIGHT_FACTOR As Single = 0.9F
+
+    ' HITBOXES
+    ' Variables de posición y dimensiones LÓGICAS (hitboxes)
+    Private x As Integer, y As Integer          ' Posición actual (x,y) en la pantalla
     Private width As Integer, height As Integer ' Dimensiones de COLISIÓN
     Private originalX As Integer, originalY As Integer ' Posición original para referencia
 
@@ -16,8 +29,9 @@ Public Class Obstacle
     Private cactusSprite As Image              ' Imagen del cactus a renderizar
     Private cactusType As Integer              ' Tipo de cactus (para tamaños diferentes)
 
-    ' Array estático de sprites de cactus
+    ' Array estatic/shared de sprites de cactus
     Private Shared cactusSprites() As Image
+    ' Indicador para evitar recargas múltiples
     Private Shared isSpritesLoaded As Boolean = False
 
     ' Definir diferentes tamaños de renderizado para variedad
@@ -27,17 +41,17 @@ Public Class Obstacle
         New Size(48, 96)    ' Cactus grande
     }
 
-    ' Constructor con dimensiones lógicas para colisiones
-    Public Sub New(startX As Integer, startY As Integer, w As Integer, h As Integer, obstacleSpeed As Single)
+    ' Constructor NUEVO - Recibe tipo específico de obstáculo
+    Public Sub New(startX As Integer, startY As Integer, obstacleType As Integer, obstacleSpeed As Single)
         ' Guardar posición original
         originalX = startX
         originalY = startY
 
-        ' Inicializar con dimensiones temporales
+        ' Inicializar con dimensiones base
         x = startX
         y = startY
-        width = w
-        height = h
+        width = BASE_HITBOX_WIDTH
+        height = BASE_HITBOX_HEIGHT
         speed = obstacleSpeed
 
         ' Cargar sprites si es necesario
@@ -45,8 +59,8 @@ Public Class Obstacle
             LoadCactusSprites()
         End If
 
-        ' Seleccionar sprite y AJUSTAR posición y dimensiones
-        SelectRandomCactusSpriteAndAdjust()
+        ' Usar el tipo de cactus y ajusta posición/dimensiones
+        SetCactusTypeAndAdjust(obstacleType)
     End Sub
 
     ' Carga todos los sprites de cactus una sola vez
@@ -57,7 +71,7 @@ Public Class Obstacle
                 My.Resources.cactus2,      ' Cactus tipo 2
                 My.Resources.cactus3       ' Cactus tipo 3
             }
-            isSpritesLoaded = True
+            isSpritesLoaded = True 'marcar como cargado
         Catch ex As Exception
             cactusSprites = Nothing
             isSpritesLoaded = False
@@ -65,7 +79,40 @@ Public Class Obstacle
         End Try
     End Sub
 
-    ' VERSIÓN CORREGIDA: Ajusta sprite, hitbox Y posición
+    ' NUEVO MÉTODO: Establece un tipo específico de cactus y ajusta dimensiones
+    Private Sub SetCactusTypeAndAdjust(obstacleType As Integer)
+        Try
+            If cactusSprites IsNot Nothing AndAlso cactusSprites.Length > 0 Then
+                ' Validar tipo y usar el especificado
+                cactusType = Math.Max(0, Math.Min(obstacleType, Math.Min(cactusSprites.Length - 1, CactusRenderSizes.Length - 1)))
+                cactusSprite = cactusSprites(cactusType)
+
+                ' Obtener tamaño de renderizado
+                Dim renderSize As Size = CactusRenderSizes(cactusType)
+
+                ' AJUSTAR HITBOX AL SPRITE
+                Dim newWidth As Integer = CInt(renderSize.Width * COLLISION_WIDTH_FACTOR)
+                Dim newHeight As Integer = CInt(renderSize.Height * COLLISION_HEIGHT_FACTOR)
+
+                ' CALCULAR NUEVA POSICIÓN PARA MANTENER ALINEACIÓN
+                Dim newX As Integer = originalX - (newWidth - width) \ 2  ' Centrar horizontalmente
+                Dim newY As Integer = originalY - (newHeight - height)    ' Alinear desde abajo
+
+                ' Actualizar dimensiones y posición
+                width = newWidth
+                height = newHeight
+                x = newX
+                y = newY
+
+            Else
+                cactusSprite = Nothing
+            End If
+        Catch ex As Exception
+            cactusSprite = Nothing
+        End Try
+    End Sub
+
+    ' MÉTODO ORIGINAL: Selecciona un sprite aleatorio y ajusta posición y dimensiones
     Private Sub SelectRandomCactusSpriteAndAdjust()
         Try
             If cactusSprites IsNot Nothing AndAlso cactusSprites.Length > 0 Then
@@ -78,12 +125,11 @@ Public Class Obstacle
                 ' Obtener tamaño de renderizado
                 Dim renderSize As Size = CactusRenderSizes(cactusType)
 
-                ' AJUSTAR HITBOX AL SPRITE (80% ancho, 90% alto para colisión más justa)
-                Dim newWidth As Integer = CInt(renderSize.Width * 0.8)
-                Dim newHeight As Integer = CInt(renderSize.Height * 0.9)
+                ' AJUSTAR HITBOX AL SPRITE
+                Dim newWidth As Integer = CInt(renderSize.Width * COLLISION_WIDTH_FACTOR)
+                Dim newHeight As Integer = CInt(renderSize.Height * COLLISION_HEIGHT_FACTOR)
 
                 ' CALCULAR NUEVA POSICIÓN PARA MANTENER ALINEACIÓN
-                ' Mantener el punto inferior del cactus en el mismo lugar
                 Dim newX As Integer = originalX - (newWidth - width) \ 2  ' Centrar horizontalmente
                 Dim newY As Integer = originalY - (newHeight - height)    ' Alinear desde abajo
 
@@ -111,7 +157,7 @@ Public Class Obstacle
         Return x + width < 0
     End Function
 
-    ' Renderiza con sprite escalado (SIN cálculo de centrado adicional)
+    ' Renderiza con sprite escalado
     Public Sub Render(g As Graphics)
         If cactusSprite IsNot Nothing Then
             Try
@@ -127,7 +173,6 @@ Public Class Obstacle
 
                 ' DEBUG: Mostrar hitbox (comentar en producción)
                 'g.DrawRectangle(Pens.Red, x, y, width, height)
-
 
             Catch ex As Exception
                 RenderFallback(g)
