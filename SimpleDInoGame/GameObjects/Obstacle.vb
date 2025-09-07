@@ -126,10 +126,8 @@ Public Class Obstacle
                 g.DrawImage(cactusSprite, renderX, renderY, renderSize.Width, renderSize.Height)
 
                 ' DEBUG: Mostrar hitbox (comentar en producción)
-                g.DrawRectangle(Pens.Red, x, y, width, height)
+                'g.DrawRectangle(Pens.Red, x, y, width, height)
 
-                ' DEBUG ADICIONAL: Mostrar punto original (comentar en producción)
-                g.FillEllipse(Brushes.Blue, originalX - 2, originalY - 2, 4, 4)
 
             Catch ex As Exception
                 RenderFallback(g)

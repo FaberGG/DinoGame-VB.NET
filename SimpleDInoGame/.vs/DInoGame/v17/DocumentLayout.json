@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|c:\\users\\jhonn\\onedrive\\unicauca\\semestre vi\\estructuras de lenguajes\\exposicion-vbnet\\demo\\dinogame\\simpledinogame\\gameobjects\\obstacle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|solutionrelative:gameobjects\\obstacle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,6 +55,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Obstacle.vb",
+              "DocumentMoniker": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\GameObjects\\Obstacle.vb",
+              "RelativeDocumentMoniker": "GameObjects\\Obstacle.vb",
+              "ToolTip": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\GameObjects\\Obstacle.vb",
+              "RelativeToolTip": "GameObjects\\Obstacle.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-07T05:34:18.164Z",
+              "EditorCaption": ""
             }
           ]
         },

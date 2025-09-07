@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("DInoGame"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fd6938fc74e843b49125dca2c6023e77066e13f"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e108764ff5a783feeb810d7b74e0149aa90988ff"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("DInoGame"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("DInoGame"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
