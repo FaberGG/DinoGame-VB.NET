@@ -7,8 +7,44 @@
       "RelativeMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|solutionrelative:manager\\obstaclemanager.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|c:\\users\\jhonn\\onedrive\\unicauca\\semestre vi\\estructuras de lenguajes\\exposicion-vbnet\\demo\\dinogame\\simpledinogame\\gameobjects\\player.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|solutionrelative:gameobjects\\player.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|c:\\users\\jhonn\\onedrive\\unicauca\\semestre vi\\estructuras de lenguajes\\exposicion-vbnet\\demo\\dinogame\\simpledinogame\\gameobjects\\obstacle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|solutionrelative:gameobjects\\obstacle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|c:\\users\\jhonn\\onedrive\\unicauca\\semestre vi\\estructuras de lenguajes\\exposicion-vbnet\\demo\\dinogame\\simpledinogame\\dinogameform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|solutionrelative:dinogameform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|c:\\users\\jhonn\\onedrive\\unicauca\\semestre vi\\estructuras de lenguajes\\exposicion-vbnet\\demo\\dinogame\\simpledinogame\\dinogameform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|solutionrelative:dinogameform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|c:\\users\\jhonn\\onedrive\\unicauca\\semestre vi\\estructuras de lenguajes\\exposicion-vbnet\\demo\\dinogame\\simpledinogame\\resources\\assets\\player\\dino_run_2.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|solutionrelative:resources\\assets\\player\\dino_run_2.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|c:\\users\\jhonn\\onedrive\\unicauca\\semestre vi\\estructuras de lenguajes\\exposicion-vbnet\\demo\\dinogame\\simpledinogame\\resources\\assets\\player\\dino_run_1.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|solutionrelative:resources\\assets\\player\\dino_run_1.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|c:\\users\\jhonn\\onedrive\\unicauca\\semestre vi\\estructuras de lenguajes\\exposicion-vbnet\\demo\\dinogame\\simpledinogame\\resources\\assets\\player\\dino_jump.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|solutionrelative:resources\\assets\\player\\dino_jump.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|c:\\users\\jhonn\\onedrive\\unicauca\\semestre vi\\estructuras de lenguajes\\exposicion-vbnet\\demo\\dinogame\\simpledinogame\\resources\\assets\\obstacles\\cactus3.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|solutionrelative:resources\\assets\\obstacles\\cactus3.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|c:\\users\\jhonn\\onedrive\\unicauca\\semestre vi\\estructuras de lenguajes\\exposicion-vbnet\\demo\\dinogame\\simpledinogame\\resources\\assets\\obstacles\\cactus2.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|solutionrelative:resources\\assets\\obstacles\\cactus2.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|c:\\users\\jhonn\\onedrive\\unicauca\\semestre vi\\estructuras de lenguajes\\exposicion-vbnet\\demo\\dinogame\\simpledinogame\\resources\\assets\\obstacles\\cactus1.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{0C6249E7-E211-4924-B8B5-2113962E40C8}|DInoGame.vbproj|solutionrelative:resources\\assets\\obstacles\\cactus1.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,29 +98,139 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DinoGameForm.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\DinoGameForm.vb",
+              "RelativeDocumentMoniker": "DinoGameForm.vb",
+              "ToolTip": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\DinoGameForm.vb [Dise\u00F1o]",
+              "RelativeToolTip": "DinoGameForm.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-07T23:22:33.473Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "dino_run_2.png - PNG [88x126, 32 bits, PNG]",
+              "DocumentMoniker": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Resources\\Assets\\Player\\dino_run_2.png",
+              "RelativeDocumentMoniker": "Resources\\Assets\\Player\\dino_run_2.png",
+              "ToolTip": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Resources\\Assets\\Player\\dino_run_2.png - PNG [88x126, 32 bits, PNG]",
+              "RelativeToolTip": "Resources\\Assets\\Player\\dino_run_2.png - PNG [88x126, 32 bits, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-09-07T23:16:07.445Z",
+              "EditorCaption": " - PNG [88x126, 32 bits, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DinoGameForm.vb",
+              "DocumentMoniker": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\DinoGameForm.vb",
+              "RelativeDocumentMoniker": "DinoGameForm.vb",
+              "ToolTip": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\DinoGameForm.vb",
+              "RelativeToolTip": "DinoGameForm.vb",
+              "ViewState": "AgIAAOAAAAAAAAAAAAAmwPAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-07T19:51:21.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Player.vb",
+              "DocumentMoniker": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\GameObjects\\Player.vb",
+              "RelativeDocumentMoniker": "GameObjects\\Player.vb",
+              "ToolTip": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\GameObjects\\Player.vb",
+              "RelativeToolTip": "GameObjects\\Player.vb",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAowHQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-07T19:49:31.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ObstacleManager.vb",
               "DocumentMoniker": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Manager\\ObstacleManager.vb",
               "RelativeDocumentMoniker": "Manager\\ObstacleManager.vb",
               "ToolTip": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Manager\\ObstacleManager.vb",
               "RelativeToolTip": "Manager\\ObstacleManager.vb",
-              "ViewState": "AgIAAHQAAAAAAAAAAAA9wEMAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAowIYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-09-07T17:55:11.682Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Obstacle.vb",
               "DocumentMoniker": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\GameObjects\\Obstacle.vb",
               "RelativeDocumentMoniker": "GameObjects\\Obstacle.vb",
               "ToolTip": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\GameObjects\\Obstacle.vb",
               "RelativeToolTip": "GameObjects\\Obstacle.vb",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAowK4AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-09-07T05:34:18.164Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "dino_run_1.png - PNG [88x126, 32 bits, PNG]",
+              "DocumentMoniker": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Resources\\Assets\\Player\\dino_run_1.png",
+              "RelativeDocumentMoniker": "Resources\\Assets\\Player\\dino_run_1.png",
+              "ToolTip": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Resources\\Assets\\Player\\dino_run_1.png - PNG [88x126, 32 bits, PNG]",
+              "RelativeToolTip": "Resources\\Assets\\Player\\dino_run_1.png - PNG [88x126, 32 bits, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-09-07T23:16:08.621Z",
+              "EditorCaption": " - PNG [88x126, 32 bits, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dino_jump.png - PNG [88x126, 32 bits, PNG]",
+              "DocumentMoniker": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Resources\\Assets\\Player\\dino_jump.png",
+              "RelativeDocumentMoniker": "Resources\\Assets\\Player\\dino_jump.png",
+              "ToolTip": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Resources\\Assets\\Player\\dino_jump.png - PNG [88x126, 32 bits, PNG]",
+              "RelativeToolTip": "Resources\\Assets\\Player\\dino_jump.png - PNG [88x126, 32 bits, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-09-07T23:16:14.679Z",
+              "EditorCaption": " - PNG [88x126, 32 bits, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "cactus3.png - PNG [50x100, 32 bits, PNG]",
+              "DocumentMoniker": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Resources\\Assets\\Obstacles\\cactus3.png",
+              "RelativeDocumentMoniker": "Resources\\Assets\\Obstacles\\cactus3.png",
+              "ToolTip": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Resources\\Assets\\Obstacles\\cactus3.png - PNG [50x100, 32 bits, PNG]",
+              "RelativeToolTip": "Resources\\Assets\\Obstacles\\cactus3.png - PNG [50x100, 32 bits, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-09-07T23:06:28.185Z",
+              "EditorCaption": " - PNG [50x100, 32 bits, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "cactus2.png - PNG [50x100, 32 bits, PNG]",
+              "DocumentMoniker": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Resources\\Assets\\Obstacles\\cactus2.png",
+              "RelativeDocumentMoniker": "Resources\\Assets\\Obstacles\\cactus2.png",
+              "ToolTip": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Resources\\Assets\\Obstacles\\cactus2.png - PNG [50x100, 32 bits, PNG]",
+              "RelativeToolTip": "Resources\\Assets\\Obstacles\\cactus2.png - PNG [50x100, 32 bits, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-09-07T23:06:23.802Z",
+              "EditorCaption": " - PNG [50x100, 32 bits, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "cactus1.png - PNG [50x100, 32 bits, PNG]",
+              "DocumentMoniker": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Resources\\Assets\\Obstacles\\cactus1.png",
+              "RelativeDocumentMoniker": "Resources\\Assets\\Obstacles\\cactus1.png",
+              "ToolTip": "C:\\Users\\jhonn\\OneDrive\\Unicauca\\Semestre VI\\Estructuras de Lenguajes\\Exposicion-VBNET\\Demo\\DInoGame\\SimpleDInoGame\\Resources\\Assets\\Obstacles\\cactus1.png - PNG [50x100, 32 bits, PNG]",
+              "RelativeToolTip": "Resources\\Assets\\Obstacles\\cactus1.png - PNG [50x100, 32 bits, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-09-07T23:06:20.964Z",
+              "EditorCaption": " - PNG [50x100, 32 bits, PNG]"
             }
           ]
         },

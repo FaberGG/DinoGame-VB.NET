@@ -90,7 +90,7 @@ Public Class Player
         ' Actualizar animación solo si está corriendo (no saltando)
         If Not isJumping Then
             animationTimer += 1
-            If animationTimer > 10 Then  ' Cambiar frame cada 10 updates (5 FPS de animación)
+            If animationTimer > 6 Then  ' Cambiar frame cada 6 updates
                 currentFrame = (currentFrame + 1) Mod 2
                 animationTimer = 0
             End If

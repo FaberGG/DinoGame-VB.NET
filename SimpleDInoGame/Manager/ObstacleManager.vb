@@ -22,6 +22,7 @@ Public Class ObstacleManager
 
     ' Lista de todos los obstáculos activos en pantalla
     Private obstacles As New List(Of Obstacle)
+    
     ' Variables de control de generación de obstáculos
     Private spawnTimer As Integer = 0           ' Contador de frames desde último spawn
     Private spawnDelay As Integer = BASE_SPAWN_DELAY ' Intervalo base entre spawns (en frames)

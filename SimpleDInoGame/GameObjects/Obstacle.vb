@@ -13,8 +13,8 @@ Public Class Obstacle
     Private Const BASE_HITBOX_HEIGHT As Integer = 60
 
     ' Constantes para ajuste de colisión
-    Private Const COLLISION_WIDTH_FACTOR As Single = 0.8F
-    Private Const COLLISION_HEIGHT_FACTOR As Single = 0.9F
+    Private Const COLLISION_WIDTH_FACTOR As Single = 0.8F '80% del ancho del sprite
+    Private Const COLLISION_HEIGHT_FACTOR As Single = 0.9F '90% de la altura del sprite
 
     ' HITBOXES
     ' Variables de posición y dimensiones LÓGICAS (hitboxes)
@@ -79,7 +79,7 @@ Public Class Obstacle
         End Try
     End Sub
 
-    ' NUEVO MÉTODO: Establece un tipo específico de cactus y ajusta dimensiones
+    'Establece un tipo específico de cactus y ajusta dimensiones
     Private Sub SetCactusTypeAndAdjust(obstacleType As Integer)
         Try
             If cactusSprites IsNot Nothing AndAlso cactusSprites.Length > 0 Then
@@ -112,40 +112,6 @@ Public Class Obstacle
         End Try
     End Sub
 
-    ' MÉTODO ORIGINAL: Selecciona un sprite aleatorio y ajusta posición y dimensiones
-    Private Sub SelectRandomCactusSpriteAndAdjust()
-        Try
-            If cactusSprites IsNot Nothing AndAlso cactusSprites.Length > 0 Then
-                Dim random As New Random()
-
-                ' Seleccionar tipo de cactus aleatorio
-                cactusType = random.Next(0, Math.Min(cactusSprites.Length, CactusRenderSizes.Length))
-                cactusSprite = cactusSprites(cactusType)
-
-                ' Obtener tamaño de renderizado
-                Dim renderSize As Size = CactusRenderSizes(cactusType)
-
-                ' AJUSTAR HITBOX AL SPRITE
-                Dim newWidth As Integer = CInt(renderSize.Width * COLLISION_WIDTH_FACTOR)
-                Dim newHeight As Integer = CInt(renderSize.Height * COLLISION_HEIGHT_FACTOR)
-
-                ' CALCULAR NUEVA POSICIÓN PARA MANTENER ALINEACIÓN
-                Dim newX As Integer = originalX - (newWidth - width) \ 2  ' Centrar horizontalmente
-                Dim newY As Integer = originalY - (newHeight - height)    ' Alinear desde abajo
-
-                ' Actualizar dimensiones y posición
-                width = newWidth
-                height = newHeight
-                x = newX
-                y = newY
-
-            Else
-                cactusSprite = Nothing
-            End If
-        Catch ex As Exception
-            cactusSprite = Nothing
-        End Try
-    End Sub
 
     ' Actualiza posición
     Public Sub Update()
